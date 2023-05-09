@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="1000dp"
+        android:layout_height="1000dp"
+        android:background="@drawable/wrk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--        <ImageView-->
+        <!--            android:id="@+id/img"-->
+        <!--            android:alpha="0.7"-->
+        <!--            android:layout_width="2000dp"-->
+        <!--            android:layout_height="2000dp"-->
+        <!--            android:background="@drawable/wrk"-->
+        <!--            android:contentDescription="Move" />-->
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:id="@+id/psc"
+            android:layout_height="fill_parent">
+            <HorizontalScrollView
+                android:id="@+id/csc"
+                android:contentDescription="Enter How Much Cookies You Want"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:alpha="0.8"
+                    android:id="@+id/rlMove"
+                    android:background="@drawable/wrk"
+                    android:layout_width="960dp"
+                    android:layout_height="720dp">
+                    <RelativeLayout
+                        android:id="@+id/rlCharacter"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@mipmap/chili_f"
+                        android:contentDescription="Move"/>
+                </RelativeLayout>
+            </HorizontalScrollView>
+        </ScrollView>
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:indeterminateOnly="false"
+        android:progressDrawable="@drawable/circle_progress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ProgressBar
+        android:progressDrawable="@drawable/circle_progress"
+        android:id="@+id/progressBar2"
+        android:indeterminateOnly="false"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="130dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ProgressBar
+        android:progressDrawable="@drawable/circle_progress"
+        android:id="@+id/progressBar3"
+        android:indeterminateOnly="false"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:contentDescription="skill1"
+        app:backgroundTint="@null"
+        android:text=""
+        android:alpha="0.7"
+        android:background="@mipmap/fox_skill_1"
+        android:id="@+id/btTimeCoolDownSkill1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:contentDescription="skill2"
+        app:backgroundTint="@null"
+        android:text=""
+        android:alpha="0.7"
+        android:background="@mipmap/fox_skill_1"
+        android:id="@+id/btTimeCoolDownSkill2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:contentDescription="skill3"
+        app:backgroundTint="@null"
+        android:text=""
+        android:alpha="0.7"
+        android:background="@mipmap/fox_skill_1"
+        android:id="@+id/btTimeCoolDownSkill3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/tvTimeSkill1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:contentDescription="skill3"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar1"
+        app:layout_constraintEnd_toEndOf="@+id/btTimeCoolDownSkill1"
+        app:layout_constraintStart_toStartOf="@+id/btTimeCoolDownSkill1"
+        app:layout_constraintTop_toTopOf="@+id/progressBar1" />
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/tvTimeSkill2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:contentDescription="skill3"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar2"
+        app:layout_constraintEnd_toEndOf="@+id/btTimeCoolDownSkill2"
+        app:layout_constraintStart_toStartOf="@+id/btTimeCoolDownSkill2"
+        app:layout_constraintTop_toTopOf="@+id/progressBar2" />
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/tvTimeSkill3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:contentDescription="skill3"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar3"
+        app:layout_constraintEnd_toEndOf="@+id/btTimeCoolDownSkill3"
+        app:layout_constraintStart_toStartOf="@+id/btTimeCoolDownSkill3"
+        app:layout_constraintTop_toTopOf="@+id/progressBar3" />
+
+    <RelativeLayout
+        android:id="@+id/btOmnidirectional"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="45dp"
+        android:background="@mipmap/move_character"
+        android:contentDescription="Move"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/circle_button"
+        android:contentDescription="Move"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
